@@ -297,17 +297,21 @@
 
         function lookupIDandDecode(idInput) {
             console.log(idInput);
+            $('#messageData').text("");
             gapi.client.gmail.users.messages.get({
                 'userId': 'me',
                 'id': idInput,
                 'format': 'full'
             }).then(function (response) {
                 var data = response.result;
-                console.log(data.payload);
+                    console.log(data.payload);
                 var content = data.payload;
-                var contentBody = content.parts[0].body.data;
+                var contentBody = content.body.data;
+                    console.log(content.mimeType);
+                        if (content.mimeType == "multipart/alternative" || content.mimeType == "multipart/mixed") {
+                            var contentBody = content.parts[0].body.data;
+                        }
                 $('.encodedDump').text(contentBody);
-                $('.encodedDump').append(content.parts[1].body.data);
 
                 function Base64Decode(str, encoding = 'utf-8') {
                     var bytes = base64js.toByteArray(str);
