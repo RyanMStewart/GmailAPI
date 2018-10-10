@@ -1,8 +1,8 @@
-#GmailAPI
+# Gmail API Quickstart
 
 *This is very similar to the quickstart available from Google. However, this particular version has some added functionality such as: clickable labels that will load corresponding message id's, message id lookup, raw message data display (Base64Encoding), and message data decoding to plain text format.*
  
- # Brief Setup
+ #Brief Setup
 After you enable the GMAIL API in Ggl Dev Console you will receive a API Key and Client_ID.
 Whitelist your HTTP server and OAuth credentials in dev console.
 Separate your auth credentials into seperate JS file so there is no accidental upload to GitHub.
