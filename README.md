@@ -2,14 +2,10 @@
 
 *This is very similar to the quickstart available from Google. However, this particular version has some added functionality such as: clickable labels that will load corresponding message id's, message id lookup, raw message data display (Base64Encoding), and message data decoding to plain text format.*
  
- #Brief Setup
+# Brief Setup
 After you enable the GMAIL API in Ggl Dev Console you will receive a API Key and Client_ID.
 Whitelist your HTTP server and OAuth credentials in dev console.
 Separate your auth credentials into seperate JS file so there is no accidental upload to GitHub.
-
-
-I included bootstrap to add a quick little styling.
-Used jQuery to easily create 'promise' functions that handle re-authentication problems caused by trying to look up Message ID's after initial authentication.
 
 ---------------------------------------
 
@@ -19,3 +15,9 @@ Then a list of labels (you set how many you'd like to be displayed in code..) wi
 
 Any label may be selected and entered into the "lookup message Id" search field; which will return a base64 encoded string.
 This string is then decoded and displayed in a seperate section.
+
+---------------------------------------
+
+I included bootstrap to add a quick little styling.
+Used jQuery to easily create 'promise' functions that handle re-authentication problems caused by trying to look up Message ID's after initial authentication.
+
